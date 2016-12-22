@@ -1,0 +1,46 @@
+[{
+	"clone_repository": {
+		"intent": ["copy", "clone"],
+		"context": ["owner", "project name"]
+	}
+}, {
+	"merge_repository": {
+		"intent": ["merge"],
+		"context": ["owner", "project name"],
+		"props": [{
+			"propname": "branch",
+			"required": true
+		}, {
+			"propname": "version",
+			"required": false
+		}]
+	}
+}, {
+	"lint": {
+		"intent": ["lint"],
+		"context": ["owner", "file name"]
+	}
+}, {
+	"david": {
+		"intent": ["david package"],
+		"context": ["project name", "owner"],
+		"props": {
+			"propname": "package name",
+			"required": false
+		}
+	}
+}, {
+	"run test cases": {
+		"intent": ["test cases"],
+		"context": ["projectname", "owner"],
+		"props": {
+			"propname": "test cases",
+			"required": false
+		}
+	}
+}, {
+	"test coverage": {
+		"intent": ["test coverage"],
+		"context": ["projectname", "owner"]
+	}
+}]

@@ -1,0 +1,70 @@
+[{
+		"create project": {
+			"intent": ["create project", "make project", "add project"],
+			"context": ["project owner"],
+			"props": [{
+				"propname": "project name",
+				"required": true
+			}, {
+				"propname": "description",
+				"required": false
+			}]
+		}
+	}, {
+		"invite member": {
+			"intent": ["add as collaborator"],
+			"context": ["username"],
+			"props": [{
+				"propname": "access",
+				"required": true
+			}]
+		}
+	}, {
+		"create issues": {
+			"intent": ["create issue"],
+			"context": ["project name", "title", "username"],
+			"props": [{
+				"propname": "comment",
+				"required": false
+			}]
+		}
+	}, {
+		"list issues": {
+			"intent": ["show issues", "list issues", "display issues"],
+			"context": ["project name", "owner"],
+			"props": [{
+				"propname": "types",
+				"required": true
+			}]
+		}
+	}, {
+		"modify issue": {
+			"intent": ["update issue", "modify issue"],
+			"context": ["project name", "issue", "owner"],
+			"props": [{
+				"propsname": "comments",
+				"required": false
+			}]
+		}
+	}, {
+		"show commits": {
+			"intent": ["show commits"],
+			"context": ["owner", "project name"]
+		}
+	}, {
+		"list project": {
+			"intent": ["list public projects"],
+			"context": ["username"]
+		}
+	}, {
+		"add license": {
+			"intent": ["add license"],
+			"context": ["project name", "owner"],
+			"props": [{
+				"propsname": "licensename",
+				"required": true
+			}]
+		}
+	}
+
+]
